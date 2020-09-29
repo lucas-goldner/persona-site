@@ -3,14 +3,6 @@ import styled from 'styled-components';
 import Grid from '@material-ui/core/Grid';
 import Typist from 'react-typist';
 
-const BG = styled.div`
-    background-image: url('/p3-3.gif');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    background-position: 50% center;
-    height: 100%;
-`
 const Title = styled.h1`
     color: whitesmoke;
     font-size: 10rem;
@@ -117,7 +109,6 @@ const MoreButton = styled.button`
 const PageOne = () => {
     return(
         <>
-        <BG>
             <Grid container direction="column" justify="flex-start" alignItems="stretch">
             <Grid item xs={12}>
             <Title><Typist ms={1000} cursor={Cursor}>Hello there,<br/>I am <TitleMark>Lucas Goldner</TitleMark></Typist></Title>
@@ -126,8 +117,6 @@ const PageOne = () => {
             <Title2>Front-End Developer<br/> & Designer</Title2>
             </Grid>
             </Grid>
-            
-        </BG>
         </>
     )
 }
