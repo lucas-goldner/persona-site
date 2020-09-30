@@ -20,7 +20,7 @@ const BGContainer = styled.div`
     overflow: auto;
     margin: auto;
     position: absolute;
-    top: 10; left: 0; bottom: 0; right: 0;
+    top: 5; left: 0; bottom: 0; right: 0;
 `
 
 const Title = styled(Typography)`
@@ -88,7 +88,7 @@ function PageOne() {
                     </Title>
                 </Grid>
                 <Grid item>
-                    <MoreButton variant="outlined" size="large" href="#about-me" onMouseEnter={hoverOn} 
+                    <MoreButton variant="outlined" size="large" href="#about" onMouseEnter={hoverOn} 
                     onMouseLeave={hoverOff} endIcon={hover ? (<TheArrowDown/>):(<TheArrowLeft/>)}>
                         Start Tour 
                     </MoreButton>
