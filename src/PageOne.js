@@ -84,7 +84,7 @@ function PageOne() {
                 </Grid>
                 <Grid item>
                     <Title align="center" color="main" variant="h1">
-                        Web-and Mobile Developer
+                        Web- and Mobile Developer
                     </Title>
                 </Grid>
                 <Grid item>
