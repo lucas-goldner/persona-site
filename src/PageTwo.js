@@ -12,6 +12,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Home } from "@material-ui/icons";
+import SideDrawer from "./SideDrawer"
 
 const useStyles = makeStyles({
   navDisplayFlex: {
@@ -61,6 +62,7 @@ function PageTwo() {
               component="nav"
               aria-labelledby="main navigation"
               className={classes.navDisplayFlex}>
+              <SideDrawer navLinks={navLinks} />
               {navLinks.map(({ title, path }) => (
                 <a href={path} key={title} className={classes.linkText}>
                   <ListItem button>
