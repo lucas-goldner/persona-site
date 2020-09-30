@@ -1,13 +1,13 @@
 body{
   background-color: rgb(65,156,188);
   font-family: "Roboto";
-  color:whitesmoke;
+  color: #E3E2DF;
   height: 100%;
 }
 
 .App {
   text-align: center;
-  color:whitesmoke;
+  color:#E3E2DF;
   height: 100%;
 }
 

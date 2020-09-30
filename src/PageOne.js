@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from "styled-components";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+import Button from "@material-ui/core/Button";
 import Typist from 'react-typist';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 const BG = styled.div`
     background-image: url("p3.gif");
@@ -14,11 +16,11 @@ const BG = styled.div`
 `
 
 const BGContainer = styled.div`
-height: 50%;
-overflow: auto;
-margin: auto;
-position: absolute;
-top: 0; left: 0; bottom: 0; right: 0;
+    height: 80%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 10; left: 0; bottom: 0; right: 0;
 `
 
 const Title = styled(Typography)`
@@ -38,7 +40,31 @@ const Cursor = {
     hideWhenDoneDelay: 1000,
 }
 
+const MoreButton = styled(Button)`
+    color: #E3E2DF !important;
+    border-color: #E3E2DF !important;
+    border-radius: 2px !important;
+    :hover {
+        background-color: #EE4C7C !important;
+        border-color: #EE4C7C !important;
+    }
+`
+
+const TheArrowLeft = styled(ArrowForwardIcon)`
+    overflow: hidden;
+    transition-duration: 0.8s;
+    transition-property: transform;
+`
+
+const TheArrowDown = styled(ArrowForwardIcon)`
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+`
+
 function PageOne() {
+    const [hover, setHover] = useState(false);
+    const hoverOn = () => {setHover(true)}
+    const hoverOff = () => {setHover(false)}
     return (
         <>
             <BG>
@@ -55,6 +81,17 @@ function PageOne() {
                             I am <TitleMark>Lucas Goldner</TitleMark>
                         </Typist>
                     </Title>
+                </Grid>
+                <Grid item>
+                    <Title align="center" color="main" variant="h1">
+                        Web-and Mobile Developer
+                    </Title>
+                </Grid>
+                <Grid item>
+                    <MoreButton variant="outlined" size="large" href="#about-me" onMouseEnter={hoverOn} 
+                    onMouseLeave={hoverOff} endIcon={hover ? (<TheArrowDown/>):(<TheArrowLeft/>)}>
+                        Start Tour 
+                    </MoreButton>
                 </Grid>
             </Grid>
             </BGContainer>
