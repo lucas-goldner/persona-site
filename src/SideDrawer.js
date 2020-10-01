@@ -2,17 +2,28 @@ import React, {useState} from 'react'
 import { List, ListItem, ListItemText, IconButton, Drawer } from "@material-ui/core"
 import { Menu } from "@material-ui/icons"
 import { makeStyles } from "@material-ui/core/styles"
+import styled from "styled-components"
 
 const useStyles = makeStyles({
+    MuiDrawer: {
+      backgroundColor: "#5d001e",
+    },
     list: {
       width: 250,
     },
     linkText: {
       textDecoration: `none`,
       textTransform: `uppercase`,
-      color: `black`,
+      color: `white`,
     },
   })
+
+const TheIconButton = styled(IconButton)`
+  color: white !important;
+`
+const TheDrawer = styled(Drawer)`
+  background-color: #5d001e;
+`
 
 const SideDrawer = ({ navLinks }) => {
     const classes = useStyles();
@@ -32,8 +43,7 @@ const SideDrawer = ({ navLinks }) => {
         className={classes.list}
           role="presentation"
           onClick={toggleDrawer(anchor, false)}
-          onKeyDown={toggleDrawer(anchor, false)}
-        >
+          onKeyDown={toggleDrawer(anchor, false)}>
           <List component="nav">
             {navLinks.map(({ title, path }) => (
               <a href={path} key={title} className={classes.linkText}>
@@ -49,20 +59,15 @@ const SideDrawer = ({ navLinks }) => {
     return (
         <>
         <React.Fragment>
-        <IconButton
-          edge="start"
+        <TheIconButton
+          edge="end"
           aria-label="menu"
           onClick={toggleDrawer("right", true)}>
           <Menu />
-        </IconButton>
-        <Drawer
-  anchor="right"
-  open={state.right}
-  onOpen={toggleDrawer("right", true)}
-  onClose={toggleDrawer("right", false)}
->
-  {sideDrawerList("right")}
-</Drawer>
+        </TheIconButton>
+        <Drawer anchor="right" open={state.right} onOpen={toggleDrawer("right", true)} onClose={toggleDrawer("right", false)} classes={{paper: classes.MuiDrawer}}>
+        {sideDrawerList("right")}
+        </Drawer>
       </React.Fragment>
         </>
     )
