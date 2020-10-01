@@ -73,7 +73,73 @@ const AboutTitle = styled(Typography)`
   }
 `;
 
+const Hex = styled.div`
+  display: flex;
+  position: relative;
+  margin: auto;
+  margin-top: 48px;
+  width: 240px;
+  height: 265px;
+  background-image: url("./me.png");
+  background-position: end;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
+  animation: 1s turn 1;
+  backface-visibility: visible;
+  @keyframes turn {
+    40% {
+        perspective(300px)
+        translateZ(80px)
+        rotateY(170deg);
+    }
+    50% {
+      transform: 
+        perspective(300px)
+        translateZ(80px)
+        rotateY(190deg);
+    }
+    80%, 100% {
+      transform: 
+        perspective(300px)
+        translateZ(0px)
+        rotateY(360deg);
+    }
+  }
+`;
+
+const Bubble = styled.div`
+  display: flex;
+  position: relative;
+  margin: auto;
+  width: 300px;
+  height: 265px;
+  background-image: url(./BubbleText.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(
+    7% 12%,
+    18% 11%,
+    21% 23%,
+    100% 14%,
+    91% 65%,
+    0 52%,
+    8% 29%,
+    11% 16%,
+    0 16%,
+    6% 0
+  );
+`;
 
 const navLinks = [
   { title: `About`, path: `#about` },
@@ -125,6 +191,12 @@ function PageTwo() {
             <div class="content">
               <div class="line"></div>
             </div>
+          </Grid>
+          <Grid item xs={12}>
+            <Hex></Hex>
+          </Grid>
+          <Grid item xs={12}>
+            <Bubble></Bubble>
           </Grid>
         </Grid>
       </BG>
