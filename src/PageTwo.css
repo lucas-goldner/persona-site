@@ -1,0 +1,57 @@
+.content {
+    width: 100%;
+    color: #EE4C7C;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    position: relative;
+     }
+    
+    .content .line {
+    height: 3px;
+    background:#EE4C7C;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-animation: dude 1.75s 1 forwards;
+    
+    -moz-animation: dude 1.75s 1 forwards;
+    
+    -o-animation: dude 1.75s 1 forwards;
+    
+    animation: dude 1.75s 1 forwards;
+    
+     }
+    
+         @-webkit-keyframes dude {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+    @-moz-keyframes dude {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+    @-o-keyframes dude {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+    @keyframes dude {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+      }
+    }
