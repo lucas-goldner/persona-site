@@ -41,6 +41,7 @@ const Cursor = {
 }
 
 const MoreButton = styled(Button)`
+    margin-top: 16px !important;
     color: #E3E2DF !important;
     border-color: #E3E2DF !important;
     border-radius: 2px !important;

@@ -62,9 +62,7 @@ function PageTwo() {
             <List
               component="nav"
               aria-labelledby="main navigation"
-              className={classes.navDisplayFlex}
-            >
-
+              className={classes.navDisplayFlex}>
               {touchDevice ? <SideDrawer navLinks={navLinks} /> : (<>
                 {navLinks.map(({ title, path }) => (
                   <a href={path} key={title} className={classes.linkText}>

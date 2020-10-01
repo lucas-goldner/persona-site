@@ -4,7 +4,7 @@ import { Menu } from "@material-ui/icons"
 import { makeStyles } from "@material-ui/core/styles"
 import styled from "styled-components"
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     MuiDrawer: {
       backgroundColor: "#5d001e",
     },
@@ -16,13 +16,11 @@ const useStyles = makeStyles({
       textTransform: `uppercase`,
       color: `white`,
     },
-  })
+  }))
 
 const TheIconButton = styled(IconButton)`
   color: white !important;
-`
-const TheDrawer = styled(Drawer)`
-  background-color: #5d001e;
+  margin-right: 200px !important;
 `
 
 const SideDrawer = ({ navLinks }) => {
@@ -62,7 +60,8 @@ const SideDrawer = ({ navLinks }) => {
         <TheIconButton
           edge="end"
           aria-label="menu"
-          onClick={toggleDrawer("right", true)}>
+          onClick={toggleDrawer("right", true)}
+          classes={classes.menuButton}>
           <Menu />
         </TheIconButton>
         <Drawer anchor="right" open={state.right} onOpen={toggleDrawer("right", true)} onClose={toggleDrawer("right", false)} classes={{paper: classes.MuiDrawer}}>
