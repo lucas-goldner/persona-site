@@ -127,7 +127,20 @@ const Bubble = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  clip-path: polygon(8% 30%, 5% 40%, 0 36%, 5% 44%, 10% 39%, 18% 52%, 100% 64%, 99% 30%, 100% 25%, 86% 23%, 18% 28%, 15% 39%);
+  clip-path: polygon(
+    8% 30%,
+    5% 40%,
+    0 36%,
+    5% 44%,
+    10% 39%,
+    18% 52%,
+    100% 64%,
+    99% 30%,
+    100% 25%,
+    86% 23%,
+    18% 28%,
+    15% 39%
+  );
 `;
 
 const TextBoxes = styled.div`
@@ -159,6 +172,34 @@ const TextBoxes = styled.div`
   background-color: black;
   width: 300px;
   height: 265px;
+`;
+
+const BubbleContainer = styled.div`
+  margin-top: 48px;
+`;
+
+const MobileBubble = styled.div`
+  display: flex;
+  position: relative;
+  margin: auto;
+  width: 300px;
+  height: 265px;
+  background-image: url(./BubbleTextMobile.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(
+    7% 12%,
+    18% 11%,
+    21% 23%,
+    100% 14%,
+    91% 65%,
+    0 52%,
+    8% 29%,
+    11% 16%,
+    0 16%,
+    6% 0
+  );
 `;
 
 const navLinks = [
@@ -212,12 +253,29 @@ function PageTwo() {
               <div class="line"></div>
             </div>
           </Grid>
-          <Grid item xs={12}>
-            <Hex></Hex>
+          {touchDevice ? (
+            <>
+            <Grid item>
+              <Hex></Hex>
+            </Grid>
+            <Grid item>
+              <MobileBubble></MobileBubble>
+            </Grid>
+            </>
+          ) : (
+            <>
+            <Grid container justify="center" direction="row">
+            <Grid item>
+              <Hex></Hex>
+            </Grid>
+            <Grid item>
+              <BubbleContainer>
+                <Bubble></Bubble>
+              </BubbleContainer>
+            </Grid>
           </Grid>
-          <Grid item xs={12}>
-            <Bubble></Bubble>
-          </Grid>
+            </> 
+          )}
           <Grid item xs={12}>
             <TextBoxes></TextBoxes>
           </Grid>
