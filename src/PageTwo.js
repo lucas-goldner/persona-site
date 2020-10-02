@@ -127,18 +127,7 @@ const Bubble = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  clip-path: polygon(
-    7% 12%,
-    18% 11%,
-    21% 23%,
-    100% 14%,
-    91% 65%,
-    0 52%,
-    8% 29%,
-    11% 16%,
-    0 16%,
-    6% 0
-  );
+  clip-path: polygon(8% 30%, 5% 40%, 0 36%, 5% 44%, 10% 39%, 18% 52%, 100% 64%, 99% 30%, 100% 25%, 86% 23%, 18% 28%, 15% 39%);
 `;
 
 const TextBoxes = styled.div`
