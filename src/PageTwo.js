@@ -141,6 +141,37 @@ const Bubble = styled.div`
   );
 `;
 
+const TextBoxes = styled.div`
+  background-image: url(./textbubblestext.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  position: relative;
+  margin: auto;
+  clip-path: polygon(
+    19% 20%,
+    18% 0,
+    92% 0,
+    94% 22%,
+    77% 22%,
+    79% 43%,
+    100% 43%,
+    100% 71%,
+    81% 72%,
+    81% 100%,
+    0 100%,
+    0 74%,
+    23% 73%,
+    21% 47%,
+    0 48%,
+    0 21%
+  );
+  background-color: black;
+  width: 300px;
+  height: 265px;
+`;
+
 const navLinks = [
   { title: `About`, path: `#about` },
   { title: `Projects`, path: `#projects` },
@@ -197,6 +228,9 @@ function PageTwo() {
           </Grid>
           <Grid item xs={12}>
             <Bubble></Bubble>
+          </Grid>
+          <Grid item xs={12}>
+            <TextBoxes></TextBoxes>
           </Grid>
         </Grid>
       </BG>
