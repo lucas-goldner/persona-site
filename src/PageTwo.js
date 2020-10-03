@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState , useEffect} from "react";
 import styled from "styled-components";
 import {
   AppBar,
@@ -18,7 +18,7 @@ import {
   Container,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { Home } from "@material-ui/icons";
+import { Home, RadioButtonCheckedTwoTone } from "@material-ui/icons";
 import SideDrawer from "./SideDrawer";
 import "./PageTwo.css";
 
@@ -34,6 +34,7 @@ const useStyles = makeStyles({
   },
   root: {
     maxWidth: 240,
+    fontFamily: "Robot",
   },
   media: {
     height: 200,
@@ -229,10 +230,21 @@ const navLinks = [
 function PageTwo() {
   const classes = useStyles();
   const touchDevice = "ontouchstart" in document.documentElement;
+  const [scrollPosition, setSrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setSrollPosition(position);
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       <BG>
-        <TheAppBar position="static" id="about">
+        <TheAppBar position={scrollPosition > 670 ? "fixed" : "static"} id="about">
           <Toolbar>
             <ToolbarLink href="#" color="inherit">
               <Home edge="start" color="inherit" aria-label="home">
@@ -301,7 +313,12 @@ function PageTwo() {
             {touchDevice ? (
               <>
                 <Container maxWidth={false}>
-                  <SkillCardsContainer container direction="row" spacing={2} justify="center">
+                  <SkillCardsContainer
+                    container
+                    direction="row"
+                    spacing={2}
+                    justify="center"
+                  >
                     <Grid item>
                       <Card className={classes.root}>
                         <CardActionArea>
@@ -324,13 +341,17 @@ function PageTwo() {
                               component="p"
                             >
                               I mainly use JavaScript for my Front-End and have
-                              successfully completed the freeCodeCamp course. 
+                              successfully completed the freeCodeCamp course.
                               Also learnt ECS6, because arrow functions make
                               life easier haha.
                             </Typography>
                           </CardContent>
                         </CardActionArea>
-                        <Button size="small" color="primary" href="https://de.wikipedia.org/wiki/JavaScript">
+                        <Button
+                          size="small"
+                          color="primary"
+                          href="https://de.wikipedia.org/wiki/JavaScript"
+                        >
                           Learn More
                         </Button>
                       </Card>
@@ -362,7 +383,11 @@ function PageTwo() {
                             </Typography>
                           </CardContent>
                         </CardActionArea>
-                        <Button size="small" color="primary" href="https://reactjs.org/">
+                        <Button
+                          size="small"
+                          color="primary"
+                          href="https://reactjs.org/"
+                        >
                           Learn More
                         </Button>
                       </Card>
@@ -395,7 +420,11 @@ function PageTwo() {
                             </Typography>
                           </CardContent>
                         </CardActionArea>
-                        <Button size="small" color="primary" href="https://de.wikipedia.org/wiki/Cascading_Style_Sheet">
+                        <Button
+                          size="small"
+                          color="primary"
+                          href="https://de.wikipedia.org/wiki/Cascading_Style_Sheet"
+                        >
                           Learn More
                         </Button>
                       </Card>
@@ -421,12 +450,16 @@ function PageTwo() {
                               color="textSecondary"
                               component="p"
                             >
-                              Useful and neccessary for structuring and presenting content
-                              on the Internet.
+                              Useful and neccessary for structuring and
+                              presenting content on the Internet.
                             </Typography>
                           </CardContent>
                         </CardActionArea>
-                        <Button size="small" color="primary" href="https://en.wikipedia.org/wiki/HTML5">
+                        <Button
+                          size="small"
+                          color="primary"
+                          href="https://en.wikipedia.org/wiki/HTML5"
+                        >
                           Learn More
                         </Button>
                       </Card>
@@ -452,48 +485,58 @@ function PageTwo() {
                               color="textSecondary"
                               component="p"
                             >
-                              Learnt the basics and more advanced concepts of this programing
-                              language. Mainly used it for making my own Games in the Unity Engine.
+                              Learnt the basics and more advanced concepts of
+                              this programing language. Mainly used it for
+                              making my own Games in the Unity Engine.
                             </Typography>
                           </CardContent>
                         </CardActionArea>
-                        <Button size="small" color="primary" href="https://de.wikipedia.org/wiki/C%2B%2B">
+                        <Button
+                          size="small"
+                          color="primary"
+                          href="https://de.wikipedia.org/wiki/C%2B%2B"
+                        >
                           Learn More
                         </Button>
                       </Card>
                     </Grid>
                     <Grid item>
-                    <Card className={classes.root}>
-                      <CardActionArea>
-                        <CardMedia
-                          className={classes.media}
-                          image="./JavaLogo.png"
-                          title="Java"
-                        />
-                        <CardContent>
-                          <Typography
-                            gutterBottom
-                            variant="h5"
-                            component="h2"
-                          >
-                            Java
-                          </Typography>
-                          <Typography
-                            variant="body2"
-                            color="textSecondary"
-                            component="p"
-                          >
-                            This was the first programing language I have learnt.
-                            During my first semester at the HdM I have made a lot of
-                            progress. While it is not the best language it is still good to know.
-                          </Typography>
-                        </CardContent>
-                      </CardActionArea>
-                      <Button size="small" color="primary" href="https://java.com/en/">
-                        Learn More
-                      </Button>
-                    </Card>
-                  </Grid>
+                      <Card className={classes.root}>
+                        <CardActionArea>
+                          <CardMedia
+                            className={classes.media}
+                            image="./JavaLogo.png"
+                            title="Java"
+                          />
+                          <CardContent>
+                            <Typography
+                              gutterBottom
+                              variant="h5"
+                              component="h2"
+                            >
+                              Java
+                            </Typography>
+                            <Typography
+                              variant="body2"
+                              color="textSecondary"
+                              component="p"
+                            >
+                              This was the first programing language I have
+                              learnt. During my first semester at the HdM I have
+                              made a lot of progress. While it is not the best
+                              language it is still good to know.
+                            </Typography>
+                          </CardContent>
+                        </CardActionArea>
+                        <Button
+                          size="small"
+                          color="primary"
+                          href="https://java.com/en/"
+                        >
+                          Learn More
+                        </Button>
+                      </Card>
+                    </Grid>
                   </SkillCardsContainer>
                 </Container>
               </>
@@ -517,10 +560,10 @@ function PageTwo() {
                         <div className="back">
                           <div className="inner">
                             <p>
-                            I mainly use JavaScript for my Front-End and have
-                            successfully completed the freeCodeCamp course.
-                            Also learnt ECS6, because arrow functions make
-                            life easier haha.
+                              I mainly use JavaScript for my Front-End and have
+                              successfully completed the freeCodeCamp course.
+                              Also learnt ECS6, because arrow functions make
+                              life easier haha.
                             </p>
                           </div>
                         </div>
@@ -543,9 +586,9 @@ function PageTwo() {
                         <div className="back">
                           <div className="inner">
                             <p>
-                            React is currently my favourite library for coding
-                            websites. In the future I am planning to switch to
-                            React-Native for App-Coding.
+                              React is currently my favourite library for coding
+                              websites. In the future I am planning to switch to
+                              React-Native for App-Coding.
                             </p>
                           </div>
                         </div>
@@ -553,102 +596,106 @@ function PageTwo() {
                     </div>
 
                     <div
-                    className="col"
-                    ontouchstart="this.classList.toggle('focus');"
-                  >
-                    <div className="container">
-                      <div
-                        className="front"
-                        style={{ backgroundImage: "url('/CSSLogo.png')" }}
-                      >
-                        <div className="inner">
-                          <p>CSS</p>
-                        </div>
-                      </div>
-                      <div className="back">
-                        <div className="inner">
-                          <p>
-                          CSS for styling my components and HTML in general.
-                          I also use styled components and frameworks like
-                          MaterialUI to make everything straightforward.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                  className="col"
-                  ontouchstart="this.classList.toggle('focus');"
-                >
-                  <div className="container">
-                    <div
-                      className="front"
-                      style={{ backgroundImage: "url('/HTMLLogo.png')" }}
+                      className="col"
+                      ontouchstart="this.classList.toggle('focus');"
                     >
-                      <div className="inner">
-                        <p>HTML</p>
+                      <div className="container">
+                        <div
+                          className="front"
+                          style={{ backgroundImage: "url('/CSSLogo.png')" }}
+                        >
+                          <div className="inner">
+                            <p>CSS</p>
+                          </div>
+                        </div>
+                        <div className="back">
+                          <div className="inner">
+                            <p>
+                              CSS for styling my components and HTML in general.
+                              I also use styled components and frameworks like
+                              MaterialUI to make everything straightforward.
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div className="back">
-                      <div className="inner">
-                        <p>
-                        Useful and neccessary for structuring and presenting content
-                        on the Internet.
-                        </p>
+
+                    <div
+                      className="col"
+                      ontouchstart="this.classList.toggle('focus');"
+                    >
+                      <div className="container">
+                        <div
+                          className="front"
+                          style={{ backgroundImage: "url('/HTMLLogo.png')" }}
+                        >
+                          <div className="inner">
+                            <p>HTML</p>
+                          </div>
+                        </div>
+                        <div className="back">
+                          <div className="inner">
+                            <p>
+                              Useful and neccessary for structuring and
+                              presenting content on the Internet.
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
 
-                <div
-                className="col"
-                ontouchstart="this.classList.toggle('focus');"
-              >
-                <div className="container">
-                  <div
-                    className="front"
-                    style={{ backgroundImage: "url('/CPlusPlusLogo.png')" }}
-                  >
-                    <div className="inner">
-                      <p>C++</p>
+                    <div
+                      className="col"
+                      ontouchstart="this.classList.toggle('focus');"
+                    >
+                      <div className="container">
+                        <div
+                          className="front"
+                          style={{
+                            backgroundImage: "url('/CPlusPlusLogo.png')",
+                          }}
+                        >
+                          <div className="inner">
+                            <p>C++</p>
+                          </div>
+                        </div>
+                        <div className="back">
+                          <div className="inner">
+                            <p>
+                              Learnt the basics and more advanced concepts of
+                              this programing language. Mainly used it for
+                              making my own Games in the Unity Engine.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="back">
-                    <div className="inner">
-                      <p>
-                      Learnt the basics and more advanced concepts of this programing
-                      language. Mainly used it for making my own Games in the Unity Engine.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              <div
-              className="col"
-              ontouchstart="this.classList.toggle('focus');"
-            >
-              <div className="container">
-                <div
-                  className="front"
-                  style={{ backgroundImage: "url('/JavaLogo.png')" }}
-                >
-                  <div className="inner">
-                    <p>Java</p>
-                  </div>
-                </div>
-                <div className="back">
-                  <div className="inner">
-                    <p>
-                    This was the first programing language I have learnt.
-                    During my first semester at the HdM I have made a lot of
-                    progress. While it is not the best language it is still good to know.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+                    <div
+                      className="col"
+                      ontouchstart="this.classList.toggle('focus');"
+                    >
+                      <div className="container">
+                        <div
+                          className="front"
+                          style={{ backgroundImage: "url('/JavaLogo.png')" }}
+                        >
+                          <div className="inner">
+                            <p>Java</p>
+                          </div>
+                        </div>
+                        <div className="back">
+                          <div className="inner">
+                            <p>
+                              This was the first programing language I have
+                              learnt. During my first semester at the HdM I have
+                              made a lot of progress. While it is not the best
+                              language it is still good to know.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </Grid>
                 </Container>
               </>
