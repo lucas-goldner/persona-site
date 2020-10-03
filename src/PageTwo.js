@@ -9,6 +9,13 @@ import {
   ListItem,
   ListItemText,
   Link,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Button,
+  Container,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Home } from "@material-ui/icons";
@@ -24,6 +31,13 @@ const useStyles = makeStyles({
     textDecoration: `none`,
     textTransform: `uppercase`,
     color: `white`,
+  },
+  root: {
+    maxWidth: 240,
+  },
+  media: {
+    height: 200,
+    paddingTop: "8%",
   },
 });
 
@@ -202,6 +216,10 @@ const MobileBubble = styled.div`
   );
 `;
 
+const SkillCardsContainer = styled(Grid)`
+  margin-top: 16px !important;
+`;
+
 const navLinks = [
   { title: `About`, path: `#about` },
   { title: `Projects`, path: `#projects` },
@@ -255,29 +273,157 @@ function PageTwo() {
           </Grid>
           {touchDevice ? (
             <>
-            <Grid item>
-              <Hex></Hex>
-            </Grid>
-            <Grid item>
-              <MobileBubble></MobileBubble>
-            </Grid>
+              <Grid item>
+                <Hex></Hex>
+              </Grid>
+              <Grid item>
+                <MobileBubble></MobileBubble>
+              </Grid>
             </>
           ) : (
             <>
-            <Grid container justify="center" direction="row">
-            <Grid item>
-              <Hex></Hex>
-            </Grid>
-            <Grid item>
-              <BubbleContainer>
-                <Bubble></Bubble>
-              </BubbleContainer>
-            </Grid>
-          </Grid>
-            </> 
+              <Grid container justify="center" direction="row">
+                <Grid item>
+                  <Hex></Hex>
+                </Grid>
+                <Grid item>
+                  <BubbleContainer>
+                    <Bubble></Bubble>
+                  </BubbleContainer>
+                </Grid>
+              </Grid>
+            </>
           )}
           <Grid item xs={12}>
             <TextBoxes></TextBoxes>
+          </Grid>
+          <Grid item xs={12}>
+            {touchDevice ? (
+              <>
+                <Container maxWidth={false}>
+                  <SkillCardsContainer container direction="row" spacing={2}>
+                    <Grid item>
+                      <Card className={classes.root}>
+                        <CardActionArea>
+                          <CardMedia
+                            className={classes.media}
+                            image="./JSLogo.png"
+                            title="JavaScript"
+                          />
+                          <CardContent>
+                            <Typography
+                              gutterBottom
+                              variant="h5"
+                              component="h2"
+                            >
+                              JavaScript
+                            </Typography>
+                            <Typography
+                              variant="body2"
+                              color="textSecondary"
+                              component="p"
+                            >
+                              I mainly use JavaScript for my Front-End and have
+                              successfully completed the freeCodeCamp course.
+                            </Typography>
+                          </CardContent>
+                        </CardActionArea>
+                        <Button size="small" color="primary">
+                          Learn More
+                        </Button>
+                      </Card>
+                    </Grid>
+                    <Grid item>
+                      <Card className={classes.root}>
+                        <CardActionArea>
+                          <CardMedia
+                            className={classes.media}
+                            image="./ReactLogo.png"
+                            title="Contemplative Reptile"
+                          />
+                          <CardContent>
+                            <Typography
+                              gutterBottom
+                              variant="h5"
+                              component="h2"
+                            >
+                              React
+                            </Typography>
+                            <Typography
+                              variant="body2"
+                              color="textSecondary"
+                              component="p"
+                            >
+                              React is currently my favourite library for coding
+                              websites. In the future I am planing to switch to
+                              React-Native for App-Coding.
+                            </Typography>
+                          </CardContent>
+                        </CardActionArea>
+                        <Button size="small" color="primary">
+                          Learn More
+                        </Button>
+                      </Card>
+                    </Grid>
+                  </SkillCardsContainer>
+                </Container>
+              </>
+            ) : (
+              <>
+                <Container maxWidth={false}>
+                  <Grid container direction="row" spacing={2}>
+                    <div
+                      className="col"
+                      ontouchstart="this.classList.toggle('focus');"
+                    >
+                      <div className="container">
+                        <div
+                          className="front"
+                          style={{ backgroundImage: "url('/JSLogo.png')" }}
+                        >
+                          <div className="inner">
+                            <p>JavaScript</p>
+                          </div>
+                        </div>
+                        <div className="back">
+                          <div className="inner">
+                            <p>
+                            I mainly use JavaScript for my Front-End and have
+                            successfully completed the freeCodeCamp course.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      className="col"
+                      ontouchstart="this.classList.toggle('focus');"
+                    >
+                      <div className="container">
+                        <div
+                          className="front"
+                          style={{ backgroundImage: "url('/ReactLogo.png')" }}
+                        >
+                          <div className="inner">
+                            <p>React</p>
+                          </div>
+                        </div>
+                        <div className="back">
+                          <div className="inner">
+                            <p>
+                            React is currently my favourite library for coding
+                            websites. In the future I am planing to switch to
+                            React-Native for App-Coding.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Grid>
+                </Container>
+              </>
+            )}
           </Grid>
         </Grid>
       </BG>
