@@ -217,7 +217,7 @@ const MobileBubble = styled.div`
 `;
 
 const SkillCardsContainer = styled(Grid)`
-  margin-top: 16px !important;
+  margin-top: 48px !important;
 `;
 
 const navLinks = [
@@ -301,7 +301,7 @@ function PageTwo() {
             {touchDevice ? (
               <>
                 <Container maxWidth={false}>
-                  <SkillCardsContainer container direction="row" spacing={2}>
+                  <SkillCardsContainer container direction="row" spacing={2} justify="center">
                     <Grid item>
                       <Card className={classes.root}>
                         <CardActionArea>
@@ -324,11 +324,13 @@ function PageTwo() {
                               component="p"
                             >
                               I mainly use JavaScript for my Front-End and have
-                              successfully completed the freeCodeCamp course.
+                              successfully completed the freeCodeCamp course. 
+                              Also learnt ECS6, because arrow functions make
+                              life easier haha.
                             </Typography>
                           </CardContent>
                         </CardActionArea>
-                        <Button size="small" color="primary">
+                        <Button size="small" color="primary" href="https://de.wikipedia.org/wiki/JavaScript">
                           Learn More
                         </Button>
                       </Card>
@@ -339,7 +341,7 @@ function PageTwo() {
                           <CardMedia
                             className={classes.media}
                             image="./ReactLogo.png"
-                            title="Contemplative Reptile"
+                            title="React"
                           />
                           <CardContent>
                             <Typography
@@ -355,16 +357,143 @@ function PageTwo() {
                               component="p"
                             >
                               React is currently my favourite library for coding
-                              websites. In the future I am planing to switch to
+                              websites. In the future I am planning to switch to
                               React-Native for App-Coding.
                             </Typography>
                           </CardContent>
                         </CardActionArea>
-                        <Button size="small" color="primary">
+                        <Button size="small" color="primary" href="https://reactjs.org/">
                           Learn More
                         </Button>
                       </Card>
                     </Grid>
+
+                    <Grid item>
+                      <Card className={classes.root}>
+                        <CardActionArea>
+                          <CardMedia
+                            className={classes.media}
+                            image="./CSSLogo.png"
+                            title="CSS"
+                          />
+                          <CardContent>
+                            <Typography
+                              gutterBottom
+                              variant="h5"
+                              component="h2"
+                            >
+                              CSS
+                            </Typography>
+                            <Typography
+                              variant="body2"
+                              color="textSecondary"
+                              component="p"
+                            >
+                              CSS for styling my components and HTML in general.
+                              I also use styled components and frameworks like
+                              MaterialUI to make everything straightforward.
+                            </Typography>
+                          </CardContent>
+                        </CardActionArea>
+                        <Button size="small" color="primary" href="https://de.wikipedia.org/wiki/Cascading_Style_Sheet">
+                          Learn More
+                        </Button>
+                      </Card>
+                    </Grid>
+                    <Grid item>
+                      <Card className={classes.root}>
+                        <CardActionArea>
+                          <CardMedia
+                            className={classes.media}
+                            image="./HTMLLogo.png"
+                            title="HMTL"
+                          />
+                          <CardContent>
+                            <Typography
+                              gutterBottom
+                              variant="h5"
+                              component="h2"
+                            >
+                              HTML
+                            </Typography>
+                            <Typography
+                              variant="body2"
+                              color="textSecondary"
+                              component="p"
+                            >
+                              Useful and neccessary for structuring and presenting content
+                              on the Internet.
+                            </Typography>
+                          </CardContent>
+                        </CardActionArea>
+                        <Button size="small" color="primary" href="https://en.wikipedia.org/wiki/HTML5">
+                          Learn More
+                        </Button>
+                      </Card>
+                    </Grid>
+                    <Grid item>
+                      <Card className={classes.root}>
+                        <CardActionArea>
+                          <CardMedia
+                            className={classes.media}
+                            image="./CPlusPlusLogo.png"
+                            title="C++"
+                          />
+                          <CardContent>
+                            <Typography
+                              gutterBottom
+                              variant="h5"
+                              component="h2"
+                            >
+                              C++
+                            </Typography>
+                            <Typography
+                              variant="body2"
+                              color="textSecondary"
+                              component="p"
+                            >
+                              Learnt the basics and more advanced concepts of this programing
+                              language. Mainly used it for making my own Games in the Unity Engine.
+                            </Typography>
+                          </CardContent>
+                        </CardActionArea>
+                        <Button size="small" color="primary" href="https://de.wikipedia.org/wiki/C%2B%2B">
+                          Learn More
+                        </Button>
+                      </Card>
+                    </Grid>
+                    <Grid item>
+                    <Card className={classes.root}>
+                      <CardActionArea>
+                        <CardMedia
+                          className={classes.media}
+                          image="./JavaLogo.png"
+                          title="Java"
+                        />
+                        <CardContent>
+                          <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="h2"
+                          >
+                            Java
+                          </Typography>
+                          <Typography
+                            variant="body2"
+                            color="textSecondary"
+                            component="p"
+                          >
+                            This was the first programing language I have learnt.
+                            During my first semester at the HdM I have made a lot of
+                            progress. While it is not the best language it is still good to know.
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                      <Button size="small" color="primary" href="https://java.com/en/">
+                        Learn More
+                      </Button>
+                    </Card>
+                  </Grid>
                   </SkillCardsContainer>
                 </Container>
               </>
@@ -390,6 +519,8 @@ function PageTwo() {
                             <p>
                             I mainly use JavaScript for my Front-End and have
                             successfully completed the freeCodeCamp course.
+                            Also learnt ECS6, because arrow functions make
+                            life easier haha.
                             </p>
                           </div>
                         </div>
@@ -413,13 +544,111 @@ function PageTwo() {
                           <div className="inner">
                             <p>
                             React is currently my favourite library for coding
-                            websites. In the future I am planing to switch to
+                            websites. In the future I am planning to switch to
                             React-Native for App-Coding.
                             </p>
                           </div>
                         </div>
                       </div>
                     </div>
+
+                    <div
+                    className="col"
+                    ontouchstart="this.classList.toggle('focus');"
+                  >
+                    <div className="container">
+                      <div
+                        className="front"
+                        style={{ backgroundImage: "url('/CSSLogo.png')" }}
+                      >
+                        <div className="inner">
+                          <p>CSS</p>
+                        </div>
+                      </div>
+                      <div className="back">
+                        <div className="inner">
+                          <p>
+                          CSS for styling my components and HTML in general.
+                          I also use styled components and frameworks like
+                          MaterialUI to make everything straightforward.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                  className="col"
+                  ontouchstart="this.classList.toggle('focus');"
+                >
+                  <div className="container">
+                    <div
+                      className="front"
+                      style={{ backgroundImage: "url('/HTMLLogo.png')" }}
+                    >
+                      <div className="inner">
+                        <p>HTML</p>
+                      </div>
+                    </div>
+                    <div className="back">
+                      <div className="inner">
+                        <p>
+                        Useful and neccessary for structuring and presenting content
+                        on the Internet.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                className="col"
+                ontouchstart="this.classList.toggle('focus');"
+              >
+                <div className="container">
+                  <div
+                    className="front"
+                    style={{ backgroundImage: "url('/CPlusPlusLogo.png')" }}
+                  >
+                    <div className="inner">
+                      <p>C++</p>
+                    </div>
+                  </div>
+                  <div className="back">
+                    <div className="inner">
+                      <p>
+                      Learnt the basics and more advanced concepts of this programing
+                      language. Mainly used it for making my own Games in the Unity Engine.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+              className="col"
+              ontouchstart="this.classList.toggle('focus');"
+            >
+              <div className="container">
+                <div
+                  className="front"
+                  style={{ backgroundImage: "url('/JavaLogo.png')" }}
+                >
+                  <div className="inner">
+                    <p>Java</p>
+                  </div>
+                </div>
+                <div className="back">
+                  <div className="inner">
+                    <p>
+                    This was the first programing language I have learnt.
+                    During my first semester at the HdM I have made a lot of
+                    progress. While it is not the best language it is still good to know.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
                   </Grid>
                 </Container>
               </>
