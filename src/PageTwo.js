@@ -342,7 +342,7 @@ function PageTwo() {
                             >
                               I mainly use JavaScript for my Front-End and have
                               successfully completed the freeCodeCamp course.
-                              Also learnt ECS6, because arrow functions make
+                              Also learned ES6, because arrow functions make
                               life easier haha.
                             </Typography>
                           </CardContent>
@@ -485,7 +485,7 @@ function PageTwo() {
                               color="textSecondary"
                               component="p"
                             >
-                              Learnt the basics and more advanced concepts of
+                              Learned the basics and more advanced concepts of
                               this programing language. Mainly used it for
                               making my own Games in the Unity Engine.
                             </Typography>
@@ -522,7 +522,7 @@ function PageTwo() {
                               component="p"
                             >
                               This was the first programing language I have
-                              learnt. During my first semester at the HdM I have
+                              learned. During my first semester at the HdM I have
                               made a lot of progress. While it is not the best
                               language it is still good to know.
                             </Typography>
@@ -562,7 +562,7 @@ function PageTwo() {
                             <p>
                               I mainly use JavaScript for my Front-End and have
                               successfully completed the freeCodeCamp course.
-                              Also learnt ECS6, because arrow functions make
+                              Also learned ES6, because arrow functions make
                               life easier haha.
                             </p>
                           </div>
@@ -662,7 +662,7 @@ function PageTwo() {
                         <div className="back">
                           <div className="inner">
                             <p>
-                              Learnt the basics and more advanced concepts of
+                              Learned the basics and more advanced concepts of
                               this programing language. Mainly used it for
                               making my own Games in the Unity Engine.
                             </p>
@@ -688,7 +688,7 @@ function PageTwo() {
                           <div className="inner">
                             <p>
                               This was the first programing language I have
-                              learnt. During my first semester at the HdM I have
+                              learned. During my first semester at the HdM I have
                               made a lot of progress. While it is not the best
                               language it is still good to know.
                             </p>
