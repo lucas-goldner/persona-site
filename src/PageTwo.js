@@ -1,4 +1,4 @@
-import React, { useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import {
   AppBar,
@@ -159,6 +159,38 @@ const Bubble = styled.div`
 `;
 
 const TextBoxes = styled.div`
+  margin-top: 48px !important;
+  background-image: url(./textbubblestext.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  position: relative;
+  margin: auto;
+  clip-path: polygon(
+    19% 20%,
+    18% 0,
+    92% 0,
+    94% 22%,
+    77% 22%,
+    79% 43%,
+    100% 43%,
+    100% 71%,
+    81% 72%,
+    81% 100%,
+    0 100%,
+    0 74%,
+    23% 73%,
+    21% 47%,
+    0 48%,
+    0 21%
+  );
+  background-color: black;
+  width: 300px;
+  height: 265px;
+`;
+
+const MobileTextBoxes = styled.div`
   background-image: url(./textbubblestext.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -221,6 +253,10 @@ const SkillCardsContainer = styled(Grid)`
   margin-top: 48px !important;
 `;
 
+const TheContainer = styled(Container)`
+  margin-top: 48px !important;
+`;
+
 const navLinks = [
   { title: `About`, path: `#about` },
   { title: `Projects`, path: `#projects` },
@@ -244,7 +280,10 @@ function PageTwo() {
   return (
     <>
       <BG>
-        <TheAppBar position={scrollPosition > 670 ? "fixed" : "static"} id="about">
+        <TheAppBar
+          position={scrollPosition > 670 ? "fixed" : "static"}
+          id="about"
+        >
           <Toolbar>
             <ToolbarLink href="#" color="inherit">
               <Home edge="start" color="inherit" aria-label="home">
@@ -307,7 +346,15 @@ function PageTwo() {
             </>
           )}
           <Grid item xs={12}>
-            <TextBoxes></TextBoxes>
+            {touchDevice ? (
+              <>
+                <MobileTextBoxes></MobileTextBoxes>
+              </>
+            ) : (
+              <>
+                <TextBoxes></TextBoxes>
+              </>
+            )}
           </Grid>
           <Grid item xs={12}>
             {touchDevice ? (
@@ -522,9 +569,9 @@ function PageTwo() {
                               component="p"
                             >
                               This was the first programing language I have
-                              learned. During my first semester at the HdM I have
-                              made a lot of progress. While it is not the best
-                              language it is still good to know.
+                              learned. During my first semester at the HdM I
+                              have made a lot of progress. While it is not the
+                              best language it is still good to know.
                             </Typography>
                           </CardContent>
                         </CardActionArea>
@@ -542,7 +589,7 @@ function PageTwo() {
               </>
             ) : (
               <>
-                <Container maxWidth={false}>
+                <TheContainer maxWidth={false}>
                   <Grid container direction="row" spacing={2}>
                     <div
                       className="col"
@@ -688,16 +735,16 @@ function PageTwo() {
                           <div className="inner">
                             <p>
                               This was the first programing language I have
-                              learned. During my first semester at the HdM I have
-                              made a lot of progress. While it is not the best
-                              language it is still good to know.
+                              learned. During my first semester at the HdM I
+                              have made a lot of progress. While it is not the
+                              best language it is still good to know.
                             </p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </Grid>
-                </Container>
+                </TheContainer>
               </>
             )}
           </Grid>
