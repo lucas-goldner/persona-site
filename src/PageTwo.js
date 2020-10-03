@@ -357,6 +357,16 @@ function PageTwo() {
             )}
           </Grid>
           <Grid item xs={12}>
+          <div>
+            <AboutTitle variant="h2">My Skills</AboutTitle>
+          </div>
+        </Grid>
+          <Grid item>
+            <div class="content2">
+              <div class="line2"></div>
+            </div>
+          </Grid>
+          <Grid item xs={12}>
             {touchDevice ? (
               <>
                 <Container maxWidth={false}>

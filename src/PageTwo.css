@@ -19,6 +19,28 @@
     animation: dude 1.75s 1 forwards;
     
      }
+
+     .content2 {
+      width: 100%;
+      color: rgb(65,156,188);
+      cursor: pointer;
+      text-transform: uppercase;
+      padding-bottom: 20px;
+      position: relative;
+       }
+      
+      .content2 .line2 {
+      height: 3px;
+      background: rgb(65,156,188);
+      position: absolute;
+      top: 10px;
+      left: 0;
+      -webkit-animation: dude 1.75s 1 forwards;
+      -moz-animation: dude 1.75s 1 forwards;
+      -o-animation: dude 1.75s 1 forwards;
+      animation: dude 1.75s 1 forwards;
+      
+       }
     
          @-webkit-keyframes dude {
       0% {
