@@ -77,13 +77,26 @@ const JStileData = [
   {
     img: "./JSPicOne.png",
     title: "Persona(l) Website",
-    link: "https://persona-site.vercel.app/"    
+    link: "https://persona-site.vercel.app/",
   },
   {
     img: "./JSPicTwo.png",
     title: "Demon Summoning Program",
-    link: "https://demon-program.vercel.app/"
-  }
+    link: "https://demon-program.vercel.app/",
+  },
+];
+
+const CPlusPlustileData = [
+  {
+    img: "./CPlusPlusOne.jpeg",
+    title: "Ace Deuce V2.4",
+    link: "http://www.mediafire.com/file/5d2j2918e92xhub/ACE_DEUCE_v0.2.4.zip/file",
+  },
+  {
+    img: "./CPlusPlusTwo.jpeg",
+    title: "Ace Deuce Mobile V0.2.1",
+    link: "http://www.mediafire.com/file/6fh3jzb8fbwbzf9/AceDeuce_v0.2.1.apk/file",
+  },
 ];
 
 function TabPanel({ children, value, index, ...other }) {
@@ -166,11 +179,11 @@ function PageThree() {
                           }}
                           actionIcon={
                             <a href={tile.link} target="_blank">
-                            <IconButton aria-label={`star ${tile.title}`}>
-                              <PlayCircleOutlineIcon
-                                className={classes.title}
-                              />
-                            </IconButton>
+                              <IconButton aria-label={`star ${tile.title}`}>
+                                <PlayCircleOutlineIcon
+                                  className={classes.title}
+                                />
+                              </IconButton>
                             </a>
                           }
                         />
@@ -180,7 +193,31 @@ function PageThree() {
                 </div>
               </TabPanel>
               <TabPanel value={value} index={2}>
-                Item Three
+                <div className={classes.root}>
+                  <GridList className={classes.gridList} cols={2.5}>
+                    {CPlusPlustileData.map((tile) => (
+                      <GridListTile key={tile.img}>
+                        <img src={tile.img} alt={tile.title} />
+                        <GridListTileBar
+                          title={tile.title}
+                          classes={{
+                            root: classes.titleBar,
+                            title: classes.title,
+                          }}
+                          actionIcon={
+                            <a href={tile.link} target="_blank">
+                              <IconButton aria-label={`star ${tile.title}`}>
+                                <PlayCircleOutlineIcon
+                                  className={classes.title}
+                                />
+                              </IconButton>
+                            </a>
+                          }
+                        />
+                      </GridListTile>
+                    ))}
+                  </GridList>
+                </div>
               </TabPanel>
               <TabPanel value={value} index={3}>
                 Item Four
