@@ -4,22 +4,15 @@ import { ThemeProvider } from "styled-components";
 import "./App.css";
 import PageOne from "./PageOne";
 import PageTwo from "./PageTwo";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import PageThree from "./PageThree";
 
-const routes = (
-  <BrowserRouter>
-    <Switch>
-      <Route path="/home" component={PageOne} exact={true}></Route>
-      <Route path="/about" component={PageTwo}></Route>
-    </Switch>
-</BrowserRouter>
-);
 
 function App() {
   return (
     <div className="App">
       <PageOne id="home" />
       <PageTwo id="about" />
+      <PageThree id="projects"/>
     </div>
   );
 }
