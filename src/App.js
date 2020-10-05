@@ -5,7 +5,7 @@ import "./App.css";
 import PageOne from "./PageOne";
 import PageTwo from "./PageTwo";
 import PageThree from "./PageThree";
-
+import PageFour from "./PageFour";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
       <PageOne id="home" />
       <PageTwo id="about" />
       <PageThree id="projects"/>
+      <PageFour id="contact"/>
     </div>
   );
 }
