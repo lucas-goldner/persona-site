@@ -15,6 +15,7 @@ import {
 } from "@material-ui/core";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 import ShareIcon from "@material-ui/icons/Share";
+import BigGridList from "./BigGridList";
 
 const StyledTabs = withStyles({
   indicator: {
@@ -49,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     justifyContent: "space-around",
     overflow: "hidden",
-    backgroundColor: theme.palette.background.paper,
+    background: "#e3afbc",
   },
   padding: {
     padding: theme.spacing(3),
@@ -60,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
     background: "#e3afbc",
   },
   title: {
-    color: theme.palette.primary.light,
+    color: "white",
   },
   titleBar: {
     width: "auto",
@@ -184,7 +185,7 @@ function PageThree() {
                 <StyledTab label="Java" index={3} />
               </StyledTabs>
               <TabPanel value={value} index={0}>
-                Item One
+                <BigGridList/>
               </TabPanel>
               <TabPanel value={value} index={1}>
                 {touchDevice ? (
