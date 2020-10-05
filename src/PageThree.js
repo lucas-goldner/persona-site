@@ -63,8 +63,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.light,
   },
   titleBar: {
-    background:
-      "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
+    width: "auto",
   },
 }));
 
@@ -83,6 +82,8 @@ const JStileData = [
     img: "./JSPicTwo.png",
     title: "Demon Summoning Program",
     link: "https://demon-program.vercel.app/",
+    share:
+      "https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fpublish.twitter.com%2F%3FbuttonType%3DTweetButton%26widget%3DButton&ref_src=twsrc%5Etfw&text=Twitter%20Publish&tw_p=tweetbutton&url=https%3A%2F%2Fpublish.twitter.com%2F%3FbuttonType%3DTweetButton%26widget%3DButton",
   },
 ];
 
@@ -153,7 +154,7 @@ function a11yProps(index) {
 function PageThree() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-
+  const touchDevice = "ontouchstart" in document.documentElement;
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -186,85 +187,280 @@ function PageThree() {
                 Item One
               </TabPanel>
               <TabPanel value={value} index={1}>
-                <div className={classes.root}>
-                  <GridList className={classes.gridList} cols={2.5}>
-                    {JStileData.map((tile) => (
-                      <GridListTile key={tile.img}>
-                        <img src={tile.img} alt={tile.title} />
-                        <GridListTileBar
-                          title={tile.title}
-                          classes={{
-                            root: classes.titleBar,
-                            title: classes.title,
-                          }}
-                          actionIcon={
-                            <a href={tile.link} target="_blank">
-                              <IconButton aria-label={`star ${tile.title}`}>
-                                <PlayCircleOutlineIcon
-                                  className={classes.title}
-                                />
-                              </IconButton>
-                            </a>
-                          }
-                        />
-                      </GridListTile>
-                    ))}
-                  </GridList>
-                </div>
+                {touchDevice ? (
+                  <>
+                    <div className={classes.root}>
+                      <GridList className={classes.gridList} cols={2.5}>
+                        {JStileData.map((tile) => (
+                          <GridListTile key={tile.img}>
+                            <img src={tile.img} alt={tile.title} />
+                            <GridListTileBar
+                              title={tile.title}
+                              link={tile.link}
+                              classes={{
+                                root: classes.titleBar,
+                                title: classes.title,
+                              }}
+                              actionIcon={
+                                <>
+                                  <a
+                                    href={tile.link}
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                  >
+                                    <IconButton
+                                      aria-label={`star ${tile.title}`}
+                                    >
+                                      <PlayCircleOutlineIcon
+                                        className={classes.title}
+                                      />
+                                    </IconButton>
+                                  </a>
+                                </>
+                              }
+                            />
+                          </GridListTile>
+                        ))}
+                      </GridList>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className={classes.root}>
+                      <GridList className={classes.gridList} cols={2.5}>
+                        {JStileData.map((tile) => (
+                          <GridListTile key={tile.img}>
+                            <img src={tile.img} alt={tile.title} />
+                            <GridListTileBar
+                              title={tile.title}
+                              link={tile.link}
+                              classes={{
+                                root: classes.titleBar,
+                                title: classes.title,
+                              }}
+                              actionIcon={
+                                <>
+                                  <a
+                                    href={tile.link}
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                  >
+                                    <IconButton
+                                      aria-label={`star ${tile.title}`}
+                                    >
+                                      <PlayCircleOutlineIcon
+                                        className={classes.title}
+                                      />
+                                    </IconButton>
+                                  </a>
+                                  <a
+                                    rel="noopener noreferrer"
+                                    href={
+                                      "https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fpublish.twitter.com%2F%3FbuttonType%3DTweetButton%26widget%3DButton&ref_src=twsrc%5Etfw&text=Check%20out%20the%20amazing%20" +
+                                      tile.title +
+                                      "%20project%20by%20@GoldZuDemNerd%20.%20Click%20here:%20" +
+                                      tile.link
+                                    }
+                                    target="_blank"
+                                  >
+                                    <IconButton
+                                      aria-label={`star ${tile.title}`}
+                                    >
+                                      <ShareIcon className={classes.title} />
+                                    </IconButton>
+                                  </a>
+                                </>
+                              }
+                            />
+                          </GridListTile>
+                        ))}
+                      </GridList>
+                    </div>
+                  </>
+                )}
               </TabPanel>
               <TabPanel value={value} index={2}>
-                <div className={classes.root}>
-                  <GridList className={classes.gridList} cols={2.5}>
-                    {CPlusPlustileData.map((tile) => (
-                      <GridListTile key={tile.img}>
-                        <img src={tile.img} alt={tile.title} />
-                        <GridListTileBar
-                          title={tile.title}
-                          classes={{
-                            root: classes.titleBar,
-                            title: classes.title,
-                          }}
-                          actionIcon={
-                            <a href={tile.link} target="_blank">
-                              <IconButton aria-label={`star ${tile.title}`}>
-                                <PlayCircleOutlineIcon
-                                  className={classes.title}
-                                />
-                              </IconButton>
-                            </a>
-                          }
-                        />
-                      </GridListTile>
-                    ))}
-                  </GridList>
-                </div>
+                {touchDevice ? (
+                  <>
+                    <div className={classes.root}>
+                      <GridList className={classes.gridList} cols={2.5}>
+                        {CPlusPlustileData.map((tile) => (
+                          <GridListTile key={tile.img}>
+                            <img src={tile.img} alt={tile.title} />
+                            <GridListTileBar
+                              title={tile.title}
+                              classes={{
+                                root: classes.titleBar,
+                                title: classes.title,
+                              }}
+                              actionIcon={
+                                <>
+                                  <a
+                                    href={tile.link}
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                  >
+                                    <IconButton
+                                      aria-label={`star ${tile.title}`}
+                                    >
+                                      <PlayCircleOutlineIcon
+                                        className={classes.title}
+                                      />
+                                    </IconButton>
+                                  </a>
+                                </>
+                              }
+                            />
+                          </GridListTile>
+                        ))}
+                      </GridList>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className={classes.root}>
+                      <GridList className={classes.gridList} cols={2.5}>
+                        {CPlusPlustileData.map((tile) => (
+                          <GridListTile key={tile.img}>
+                            <img src={tile.img} alt={tile.title} />
+                            <GridListTileBar
+                              title={tile.title}
+                              classes={{
+                                root: classes.titleBar,
+                                title: classes.title,
+                              }}
+                              actionIcon={
+                                <>
+                                  <a
+                                    href={tile.link}
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                  >
+                                    <IconButton
+                                      aria-label={`star ${tile.title}`}
+                                    >
+                                      <PlayCircleOutlineIcon
+                                        className={classes.title}
+                                      />
+                                    </IconButton>
+                                  </a>
+                                  <a
+                                    rel="noopener noreferrer"
+                                    href={
+                                      "https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fpublish.twitter.com%2F%3FbuttonType%3DTweetButton%26widget%3DButton&ref_src=twsrc%5Etfw&text=Check%20out%20the%20amazing%20" +
+                                      tile.title +
+                                      "%20project%20by%20@GoldZuDemNerd%20.%20Click%20here:%20" +
+                                      tile.link
+                                    }
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                  >
+                                    <IconButton
+                                      aria-label={`star ${tile.title}`}
+                                    >
+                                      <ShareIcon className={classes.title} />
+                                    </IconButton>
+                                  </a>
+                                </>
+                              }
+                            />
+                          </GridListTile>
+                        ))}
+                      </GridList>
+                    </div>
+                  </>
+                )}
               </TabPanel>
               <TabPanel value={value} index={3}>
-                <div className={classes.root}>
-                  <GridList className={classes.gridList} cols={2.5}>
-                    {JavatdileData.map((tile) => (
-                      <GridListTile key={tile.img}>
-                        <img src={tile.img} alt={tile.title} />
-                        <GridListTileBar
-                          title={tile.title}
-                          classes={{
-                            root: classes.titleBar,
-                            title: classes.title,
-                          }}
-                          actionIcon={
-                            <a href={tile.link} target="_blank">
-                              <IconButton aria-label={`star ${tile.title}`}>
-                                <PlayCircleOutlineIcon
-                                  className={classes.title}
-                                />
-                              </IconButton>
-                            </a>
-                          }
-                        />
-                      </GridListTile>
-                    ))}
-                  </GridList>
-                </div>
+                {touchDevice ? (
+                  <>
+                    <div className={classes.root}>
+                      <GridList className={classes.gridList} cols={2.5}>
+                        {JavatdileData.map((tile) => (
+                          <GridListTile key={tile.img}>
+                            <img src={tile.img} alt={tile.title} />
+                            <GridListTileBar
+                              title={tile.title}
+                              classes={{
+                                root: classes.titleBar,
+                                title: classes.title,
+                              }}
+                              actionIcon={
+                                <>
+                                  <a
+                                    href={tile.link}
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                  >
+                                    <IconButton
+                                      aria-label={`star ${tile.title}`}
+                                    >
+                                      <PlayCircleOutlineIcon
+                                        className={classes.title}
+                                      />
+                                    </IconButton>
+                                  </a>
+                                </>
+                              }
+                            />
+                          </GridListTile>
+                        ))}
+                      </GridList>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className={classes.root}>
+                      <GridList className={classes.gridList} cols={2.5}>
+                        {JavatdileData.map((tile) => (
+                          <GridListTile key={tile.img}>
+                            <img src={tile.img} alt={tile.title} />
+                            <GridListTileBar
+                              title={tile.title}
+                              classes={{
+                                root: classes.titleBar,
+                                title: classes.title,
+                              }}
+                              actionIcon={
+                                <>
+                                  <a
+                                    href={tile.link}
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                  >
+                                    <IconButton
+                                      aria-label={`star ${tile.title}`}
+                                    >
+                                      <PlayCircleOutlineIcon
+                                        className={classes.title}
+                                      />
+                                    </IconButton>
+                                  </a>
+                                  <a
+                                    rel="noopener noreferrer"
+                                    href={
+                                      "https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fpublish.twitter.com%2F%3FbuttonType%3DTweetButton%26widget%3DButton&ref_src=twsrc%5Etfw&text=Check%20out%20the%20amazing%20" +
+                                      tile.title +
+                                      "%20project%20by%20@GoldZuDemNerd%20.%20Click%20here:%20" +
+                                      tile.link
+                                    }
+                                    target="_blank"
+                                  >
+                                    <IconButton
+                                      aria-label={`star ${tile.title}`}
+                                    >
+                                      <ShareIcon className={classes.title} />
+                                    </IconButton>
+                                  </a>
+                                </>
+                              }
+                            />
+                          </GridListTile>
+                        ))}
+                      </GridList>
+                    </div>
+                  </>
+                )}
               </TabPanel>
             </div>
           </Grid>
