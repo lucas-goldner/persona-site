@@ -1,31 +1,32 @@
 import React from "react";
 import styled from "styled-components";
+import { Container, Grid, Typography } from "@material-ui/core";
+import FourTrans from "./FourTrans";
 
 const BG = styled.div`
   background-color: rgb(65, 156, 188);
+  font-family: "Roboto !important";
 `;
 
-const SVG = styled.svg`
-    fill: #e3afbc;
-`
+const ContactTitle = styled(Typography)`
+  font-family: "Roboto";
+`;
 
 function PageFour() {
   return (
     <>
       <BG>
-        <div class="custom-shape-divider-top-1601913997">
-          <SVG
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z"
-              class="shape-fill"
-            ></path>
-          </SVG>
-        </div>
+        <FourTrans></FourTrans>
+        <Container>
+          <Grid container direction="column" justify="center">
+            <Grid item>
+              <ContactTitle variant={"h2"}>Contact</ContactTitle>
+            </Grid>
+            <Grid item>
+            
+            </Grid>
+          </Grid>
+        </Container>
       </BG>
     </>
   );
