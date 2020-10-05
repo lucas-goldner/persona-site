@@ -90,12 +90,32 @@ const CPlusPlustileData = [
   {
     img: "./CPlusPlusOne.jpeg",
     title: "Ace Deuce V2.4",
-    link: "http://www.mediafire.com/file/5d2j2918e92xhub/ACE_DEUCE_v0.2.4.zip/file",
+    link:
+      "http://www.mediafire.com/file/5d2j2918e92xhub/ACE_DEUCE_v0.2.4.zip/file",
   },
   {
     img: "./CPlusPlusTwo.jpeg",
     title: "Ace Deuce Mobile V0.2.1",
-    link: "http://www.mediafire.com/file/6fh3jzb8fbwbzf9/AceDeuce_v0.2.1.apk/file",
+    link:
+      "http://www.mediafire.com/file/6fh3jzb8fbwbzf9/AceDeuce_v0.2.1.apk/file",
+  },
+];
+
+const JavatdileData = [
+  {
+    img: "./JavaOne.png",
+    title: "The WeatherFetcher",
+    link: "https://github.com/lucas-goldner/weatherfetcher",
+  },
+  {
+    img: "./JavaTwo.png",
+    title: "GNLobby Plugin for Minecraft",
+    link: "https://github.com/lucas-goldner/gnlobby",
+  },
+  {
+    img: "./JavaThree.png",
+    title: "Sonic Survival Games Plugin for Minecraft",
+    link: "https://github.com/lucas-goldner/sonicsg",
   },
 ];
 
@@ -220,7 +240,31 @@ function PageThree() {
                 </div>
               </TabPanel>
               <TabPanel value={value} index={3}>
-                Item Four
+                <div className={classes.root}>
+                  <GridList className={classes.gridList} cols={2.5}>
+                    {JavatdileData.map((tile) => (
+                      <GridListTile key={tile.img}>
+                        <img src={tile.img} alt={tile.title} />
+                        <GridListTileBar
+                          title={tile.title}
+                          classes={{
+                            root: classes.titleBar,
+                            title: classes.title,
+                          }}
+                          actionIcon={
+                            <a href={tile.link} target="_blank">
+                              <IconButton aria-label={`star ${tile.title}`}>
+                                <PlayCircleOutlineIcon
+                                  className={classes.title}
+                                />
+                              </IconButton>
+                            </a>
+                          }
+                        />
+                      </GridListTile>
+                    ))}
+                  </GridList>
+                </div>
               </TabPanel>
             </div>
           </Grid>
