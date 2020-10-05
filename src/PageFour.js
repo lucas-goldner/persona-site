@@ -26,7 +26,7 @@ const ContactTitle = styled(Typography)`
 `;
 
 const MailText = styled(Typography)`
-  color: white;
+  color: #ee4c7c;
 `;
 
 function PageFour() {
@@ -36,7 +36,7 @@ function PageFour() {
       <BG>
         <FourTrans></FourTrans>
         <Container>
-          <Grid container direction="column" justify="center">
+          <Grid container direction="column" justify="center" id="contact">
             <Grid item>
               <ContactTitle variant={"h2"}>Contact</ContactTitle>
             </Grid>

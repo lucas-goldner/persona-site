@@ -10,10 +10,10 @@ import PageFour from "./PageFour";
 function App() {
   return (
     <div className="App">
-      <PageOne id="home" />
-      <PageTwo id="about" />
-      <PageThree id="projects"/>
-      <PageFour id="contact"/>
+      <PageOne/>
+      <PageTwo/>
+      <PageThree/>
+      <PageFour/>
     </div>
   );
 }

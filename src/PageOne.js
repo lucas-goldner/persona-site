@@ -70,7 +70,7 @@ function PageOne() {
         <>
             <BG>
             <BGContainer>
-            <Grid container justify="center" direction="column">
+            <Grid container justify="center" direction="column" id="home">
                 <Grid item>
                     <Title align="center" color="main" variant="h1">
                         Hello there

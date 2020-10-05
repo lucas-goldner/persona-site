@@ -281,7 +281,6 @@ function PageTwo() {
       <BG>
         <TheAppBar
           position={scrollPosition > 670 ? "fixed" : "static"}
-          id="about"
         >
           <Toolbar>
             <ToolbarLink href="#" color="inherit">
@@ -310,7 +309,7 @@ function PageTwo() {
             </List>
           </Toolbar>
         </TheAppBar>
-        <Grid container justify="center" direction="column">
+        <Grid container justify="center" direction="column" id="about" >
           <Grid item xs={12}>
             <div>
               <AboutTitle variant="h2">About</AboutTitle>
