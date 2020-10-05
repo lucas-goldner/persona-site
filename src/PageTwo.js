@@ -11,14 +11,13 @@ import {
   Link,
   Card,
   CardActionArea,
-  CardActions,
   CardContent,
   CardMedia,
   Button,
   Container,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { Home, RadioButtonCheckedTwoTone } from "@material-ui/icons";
+import { Home } from "@material-ui/icons";
 import SideDrawer from "./SideDrawer";
 import "./PageTwo.css";
 
