@@ -82,22 +82,55 @@ const tileData = [
 const TheGridList = styled(GridList)`
   width: 100% !important;
 
-  @media (max-width: 700px){
+  @media (max-width: 700px) {
     width: 500px !important;
   }
 
-  @media (max-width: 600px){
+  @media (max-width: 600px) {
     width: 400px !important;
   }
 
-  @media (max-width: 500px){
+  @media (max-width: 500px) {
     width: 300px !important;
   }
 
-  @media (max-width: 400px){
+  @media (max-width: 400px) {
     width: 200px !important;
   }
-`
+
+  @media screen and (orientation: landscape) and (max-device-width: 1100px) {
+    width: 900px !important;
+  }
+
+  @media screen and (orientation: landscape) and (max-device-width: 1000px) {
+    width: 800px !important;
+  }
+
+  @media screen and (orientation: landscape) and (max-device-width: 900px) {
+    width: 700px !important;
+  }
+
+  @media screen and (orientation: landscape) and (max-device-width: 800px) {
+    width: 600px !important;
+  }
+
+  @media screen and (orientation: landscape) and (max-device-width: 700px) {
+    width: 500px !important;
+  }
+
+  @media screen and (orientation: landscape) and (max-device-width: 600px) {
+    width: 400px !important;
+  }
+
+  @media screen and (orientation: landscape) and (max-device-width: 500px) {
+    width: 300px !important;
+  }
+
+  @media screen and (orientation: landscape) and (max-device-width: 400px) {
+    width: 200px !important;
+  }
+
+`;
 
 const BigGridList = (props) => {
   const classes = useStyles();
