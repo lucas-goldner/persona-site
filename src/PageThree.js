@@ -164,7 +164,7 @@ function PageThree() {
     <>
       <BG>
         <ThreeTrans></ThreeTrans>
-        <Grid container justify="center" direction="column" id="projects">
+        <Grid container justify="center" direction="column">
           <Grid item xs={12}>
             <Typography variant={"h2"}>Projects</Typography>
           </Grid>

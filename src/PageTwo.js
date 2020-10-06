@@ -308,7 +308,7 @@ function PageTwo() {
             </List>
           </Toolbar>
         </TheAppBar>
-        <Grid container justify="center" direction="column" id="about">
+        <Grid container justify="center" direction="column">
           <Grid item xs={12}>
             <div>
               <AboutTitle variant="h2">About</AboutTitle>
@@ -352,10 +352,11 @@ function PageTwo() {
                 <TextBoxes></TextBoxes>
               </>
             )}
+            <d id="skills"></d>
           </Grid>
           <Grid item xs={12}>
             <div>
-              <AboutTitle variant="h2" id="skills">
+              <AboutTitle variant="h2">
                 My Skills
               </AboutTitle>
             </div>
@@ -828,6 +829,7 @@ function PageTwo() {
             )}
           </Grid>
         </Grid>
+        <d id="projects"></d>
       </BG>
     </>
   );

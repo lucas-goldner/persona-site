@@ -101,6 +101,7 @@ function PageOne() {
             </Grid>
             </BGContainer>
             </BG>
+            <d id="about"></d>
         </>
     )
 }
