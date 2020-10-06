@@ -280,9 +280,7 @@ function PageTwo() {
   return (
     <>
       <BG>
-        <TheAppBar
-          position={scrollPosition > 670 ? "fixed" : "static"}
-        >
+        <TheAppBar position={scrollPosition > 670 ? "fixed" : "static"}>
           <Toolbar>
             <ToolbarLink href="#" color="inherit">
               <Home edge="start" color="inherit" aria-label="home">
@@ -310,7 +308,7 @@ function PageTwo() {
             </List>
           </Toolbar>
         </TheAppBar>
-        <Grid container justify="center" direction="column" id="about" >
+        <Grid container justify="center" direction="column" id="about">
           <Grid item xs={12}>
             <div>
               <AboutTitle variant="h2">About</AboutTitle>
@@ -356,10 +354,12 @@ function PageTwo() {
             )}
           </Grid>
           <Grid item xs={12}>
-          <div>
-            <AboutTitle variant="h2" id="skills">My Skills</AboutTitle>
-          </div>
-        </Grid>
+            <div>
+              <AboutTitle variant="h2" id="skills">
+                My Skills
+              </AboutTitle>
+            </div>
+          </Grid>
           <Grid item>
             <div class="content2">
               <div class="line2"></div>
@@ -556,6 +556,45 @@ function PageTwo() {
                         </Button>
                       </Card>
                     </Grid>
+
+                    <Grid item>
+                      <Card className={classes.root}>
+                        <CardActionArea>
+                          <CardMedia
+                            className={classes.media}
+                            image="./Adobe.png"
+                            title="Creative Cloud"
+                          />
+                          <CardContent>
+                            <Typography
+                              gutterBottom
+                              variant="h5"
+                              component="h2"
+                            >
+                              Creative Cloud
+                            </Typography>
+                            <Typography
+                              variant="body2"
+                              color="textSecondary"
+                              component="p"
+                            >
+                              I am very experienced in Photoshop, have edited a
+                              lot of videos in Premiere Pro and After Effects
+                              and saved audio recordings in Audition. At the
+                              moment I am learning Illustrator.
+                            </Typography>
+                          </CardContent>
+                        </CardActionArea>
+                        <Button
+                          size="small"
+                          color="primary"
+                          href="https://www.adobe.com/#"
+                        >
+                          Learn More
+                        </Button>
+                      </Card>
+                    </Grid>
+
                     <Grid item>
                       <Card className={classes.root}>
                         <CardActionArea>
@@ -593,7 +632,7 @@ function PageTwo() {
                         </Button>
                       </Card>
                       <Grid item>
-                      <Typography>You found me haha</Typography>
+                        <Typography>You found me haha</Typography>
                       </Grid>
                     </Grid>
                   </SkillCardsContainer>
@@ -724,6 +763,34 @@ function PageTwo() {
                               Learned the basics and more advanced concepts of
                               this programing language. Mainly used it for
                               making my own Games in the Unity Engine.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      className="col"
+                      ontouchstart="this.classList.toggle('focus');"
+                    >
+                      <div className="container">
+                        <div
+                          className="front"
+                          style={{
+                            backgroundImage: "url('/Adobe.png')",
+                          }}
+                        >
+                          <div className="inner">
+                            <p>Creative Cloud</p>
+                          </div>
+                        </div>
+                        <div className="back">
+                          <div className="inner">
+                            <p>
+                              I am very experienced in Photoshop, have edited a
+                              lot of videos in Premiere Pro and After Effects
+                              and saved audio recordings in Audition. At the
+                              moment I am learning Illustrator.
                             </p>
                           </div>
                         </div>

@@ -21,6 +21,10 @@ const BGContainer = styled.div`
     margin: auto;
     position: absolute;
     top: 5; left: 0; bottom: 0; right: 0;
+    @media (max-width: 400px){
+        top: 0;
+        height: 100%;
+    }
 `
 
 const Title = styled(Typography)`
