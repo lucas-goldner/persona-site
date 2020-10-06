@@ -5,6 +5,7 @@ import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 import IconButton from "@material-ui/core/IconButton";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
+import styled from "styled-components";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     background: "#e3afbc",
   },
   gridList: {
-    width: "100%",
+    width: 500,
     height: 450,
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
     transform: "translateZ(0)",
@@ -78,12 +79,32 @@ const tileData = [
   },
 ];
 
+const TheGridList = styled(GridList)`
+  width: 100% !important;
+
+  @media (max-width: 700px){
+    width: 600px !important;
+  }
+
+  @media (max-width: 600px){
+    width: 500px !important;
+  }
+
+  @media (max-width: 500px){
+    width: 400px !important;
+  }
+
+  @media (max-width: 400px){
+    width: 300px !important;
+  }
+`
+
 const BigGridList = (props) => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <GridList cellHeight={200} spacing={1} className={classes.gridList}>
+      <TheGridList cellHeight={200} spacing={1} className={classes.gridList}>
         {tileData.map((tile) => (
           <GridListTile
             key={tile.img}
@@ -106,7 +127,7 @@ const BigGridList = (props) => {
             />
           </GridListTile>
         ))}
-      </GridList>
+      </TheGridList>
     </div>
   );
 };
