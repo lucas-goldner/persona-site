@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Container, Grid, Typography, Button } from "@material-ui/core";
+import { Container, Grid, Typography, IconButton } from "@material-ui/core";
 import FourTrans from "./FourTrans";
 import {
   SocialProvider,
@@ -27,8 +27,13 @@ const ContactTitle = styled(Typography)`
 `;
 
 const MailText = styled(Typography)`
-  color: #ee4c7c;
+  color: #5d001e;
 `;
+
+const TheIconButton = styled(IconButton)`
+  color: white !important;
+  border: white !important;
+`
 
 function PageFour() {
   const classes = useStyles();
@@ -63,21 +68,20 @@ function PageFour() {
                 />
                 <SocialLink
                   brand={"Envelope"}
-                  href={"https://github.com/lucas-goldner"}
+                  href={"mailto:lucas.goldnerd@gmail.com"}
                   className={classes.sociallink}
                 />
               </SocialProvider>
             </Grid>
             <Grid item>
             <a href="#">
-              <Button
+              <TheIconButton
                 variant="contained"
                 size="large"
                 className={classes.button}
-                startIcon={<ExpandLessIcon />}
               >
-              Home
-              </Button>
+              <ExpandLessIcon />
+              </TheIconButton>
               </a>
             </Grid>
           </Grid>
