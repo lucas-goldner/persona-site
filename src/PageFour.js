@@ -32,7 +32,6 @@ const MailText = styled(Typography)`
 
 const TheIconButton = styled(IconButton)`
   color: white !important;
-  border: white !important;
 `
 
 function PageFour() {

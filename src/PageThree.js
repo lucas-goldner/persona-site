@@ -16,6 +16,7 @@ import {
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 import ShareIcon from "@material-ui/icons/Share";
 import BigGridList from "./BigGridList";
+import ThreeTrans from "./ThreeTrans";
 
 const StyledTabs = withStyles({
   indicator: {
@@ -162,6 +163,7 @@ function PageThree() {
   return (
     <>
       <BG>
+        <ThreeTrans></ThreeTrans>
         <Grid container justify="center" direction="column" id="projects">
           <Grid item xs={12}>
             <Typography variant={"h2"}>Projects</Typography>

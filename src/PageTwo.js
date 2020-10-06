@@ -258,6 +258,7 @@ const TheContainer = styled(Container)`
 
 const navLinks = [
   { title: `About`, path: `#about` },
+  { title: `Skills`, path: `#skills` },
   { title: `Projects`, path: `#projects` },
   { title: `Contact`, path: `#contact` },
 ];
@@ -356,7 +357,7 @@ function PageTwo() {
           </Grid>
           <Grid item xs={12}>
           <div>
-            <AboutTitle variant="h2">My Skills</AboutTitle>
+            <AboutTitle variant="h2" id="skills">My Skills</AboutTitle>
           </div>
         </Grid>
           <Grid item>
