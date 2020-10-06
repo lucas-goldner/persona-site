@@ -592,6 +592,9 @@ function PageTwo() {
                           Learn More
                         </Button>
                       </Card>
+                      <Grid item>
+                      <Typography>You found me haha</Typography>
+                      </Grid>
                     </Grid>
                   </SkillCardsContainer>
                 </Container>

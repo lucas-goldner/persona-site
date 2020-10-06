@@ -467,7 +467,6 @@ function PageThree() {
               </TabPanel>
             </div>
           </Grid>
-          <Grid item></Grid>
         </Grid>
       </BG>
     </>
