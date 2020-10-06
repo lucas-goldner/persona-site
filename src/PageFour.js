@@ -165,7 +165,7 @@ function PageFour() {
             </Grid>
             <Grid item>
               <ImpressButon onClick={handleOpen} className={classes.button}>
-                Impress
+                Imprint
               </ImpressButon>
               <Modal
                 aria-labelledby="Imprint"
