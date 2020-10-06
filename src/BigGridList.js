@@ -5,7 +5,6 @@ import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 import IconButton from "@material-ui/core/IconButton";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
-import ShareIcon from "@material-ui/icons/Share";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     background: "#e3afbc",
   },
   gridList: {
-    width: 500,
+    width: "100%",
     height: 450,
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
     transform: "translateZ(0)",
@@ -79,7 +78,7 @@ const tileData = [
   },
 ];
 
-const BigGridList = () => {
+const BigGridList = (props) => {
   const classes = useStyles();
 
   return (

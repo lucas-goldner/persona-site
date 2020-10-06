@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Container, Grid, Typography } from "@material-ui/core";
+import { Container, Grid, Typography, Button } from "@material-ui/core";
 import FourTrans from "./FourTrans";
 import {
   SocialProvider,
@@ -8,6 +8,7 @@ import {
 } from "@mui-treasury/components/socialLink";
 import { useMoonSocialLinkStyles } from "@mui-treasury/styles/socialLink/round";
 import { makeStyles } from "@material-ui/core/styles";
+import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 
 const useStyles = makeStyles({
   sociallink: {
@@ -66,6 +67,18 @@ function PageFour() {
                   className={classes.sociallink}
                 />
               </SocialProvider>
+            </Grid>
+            <Grid item>
+            <a href="#">
+              <Button
+                variant="contained"
+                size="large"
+                className={classes.button}
+                startIcon={<ExpandLessIcon />}
+              >
+              Home
+              </Button>
+              </a>
             </Grid>
           </Grid>
         </Container>
