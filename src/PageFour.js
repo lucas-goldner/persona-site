@@ -143,7 +143,7 @@ function PageFour() {
               <SocialProvider useStyles={useMoonSocialLinkStyles}>
                 <SocialLink
                   brand={"Twitter"}
-                  href={"https://twitter.com/GoldZuDemNerd"}
+                  href={"https://twitter.com/LucasGoldner"}
                   className={classes.sociallink}
                 />
                 <SocialLink
