@@ -4,6 +4,9 @@
 
 .theAppBar {
   background-color: #5d001e !important;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  z-index: 1;
 }
 
 .ToolBarLink {
@@ -210,116 +213,116 @@
   font-family: "Robot";
 }
 
-#JS{
-    background-image: url(../img/JSLogo.png);
-    background-color: whitesmoke;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+#JS {
+  background-image: url(../img/JSLogo.png);
+  background-color: whitesmoke;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#JSTwo{
-    height: 200px;
-    background-image: url(../img/JSLogo.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+#JSTwo {
+  height: 200px;
+  background-image: url(../img/JSLogo.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#React{
-    background-image: url(../img/ReactLogo.png);
-    background-color: whitesmoke;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+#React {
+  background-image: url(../img/ReactLogo.png);
+  background-color: whitesmoke;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#ReactTwo{
-    height: 200px;
-    background-image: url(../img/ReactLogo.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+#ReactTwo {
+  height: 200px;
+  background-image: url(../img/ReactLogo.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#CSS{
-    background-image: url(../img/CSSLogo.png);
-    background-color: whitesmoke;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+#CSS {
+  background-image: url(../img/CSSLogo.png);
+  background-color: whitesmoke;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#CSSTwo{
-    height: 200px;
-    background-image: url(../img/CSSLogo.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+#CSSTwo {
+  height: 200px;
+  background-image: url(../img/CSSLogo.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#HTML{
-    background-image: url(../img/HTMLLogo.png);
-    background-color: whitesmoke;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+#HTML {
+  background-image: url(../img/HTMLLogo.png);
+  background-color: whitesmoke;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#HTMLTwo{
-    height: 200px;
-    background-image: url(../img/HTMLLogo.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+#HTMLTwo {
+  height: 200px;
+  background-image: url(../img/HTMLLogo.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#CPlusPlus{
-    background-image: url(../img/CPlusPlusLogo.png);
-    background-color: whitesmoke;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+#CPlusPlus {
+  background-image: url(../img/CPlusPlusLogo.png);
+  background-color: whitesmoke;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#CPlusPlusTwo{
-    height: 200px;
-    background-image: url(../img/CPlusPlusLogo.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+#CPlusPlusTwo {
+  height: 200px;
+  background-image: url(../img/CPlusPlusLogo.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#Adobe{
-    background-image: url(../img/Adobe.png);
-    background-color: whitesmoke;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+#Adobe {
+  background-image: url(../img/Adobe.png);
+  background-color: whitesmoke;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#AdobeTwo{
-    height: 200px;
-    background-image: url(../img/Adobe.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+#AdobeTwo {
+  height: 200px;
+  background-image: url(../img/Adobe.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#Java{
-    background-image: url(../img/JavaLogo.png);
-    background-color: whitesmoke;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+#Java {
+  background-image: url(../img/JavaLogo.png);
+  background-color: whitesmoke;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#JavaTwo{
-    height: 200px;
-    background-image: url(../img/JavaLogo.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+#JavaTwo {
+  height: 200px;
+  background-image: url(../img/JavaLogo.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .CardMedia {

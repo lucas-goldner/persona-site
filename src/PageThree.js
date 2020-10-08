@@ -123,6 +123,7 @@ function TabPanel({ children, value, index, ...other }) {
         hidden={value !== index}
         id={`simple-tabpanel-${index}`}
         aria-labelledby={`simple-tab-${index}`}
+        className="TabPanel"
         {...other}
       >
         {value === index && (

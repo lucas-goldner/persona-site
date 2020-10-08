@@ -6,7 +6,7 @@ body {
   height: 100%;
   scroll-behavior: smooth;
   background-color: #e3e2df;
-  font-family: "Roboto";
+  font-family: "Roboto", "Helvetica Neue", "Arial", "sans-serif";
   height: 100%;
   text-align: center;
 }

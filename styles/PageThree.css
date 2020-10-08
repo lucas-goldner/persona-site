@@ -2,3 +2,83 @@
   background-color: #e3afbc;
   font-family: "Roboto !important";
 }
+
+.TabPanel{
+  width: 100% !important;
+  width: 500;
+  height: 450;
+  transform: "translateZ(0)";
+  background: "#e3afbc";
+}
+
+@media (max-width: 700px) {
+  .TabPanel {
+    width: 600px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .TabPanel {
+    width: 500px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .TabPanel {
+    width: 400px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .TabPanel {
+    width: 300px !important;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-device-width: 1100px) {
+  .TabPanel {
+    width: 1000px !important;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-device-width: 1000px) {
+  .TabPanel {
+    width: 900px !important;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-device-width: 900px) {
+  .TabPanel {
+    width: 800px !important;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-device-width: 800px) {
+  .TabPanel {
+    width: 700px !important;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-device-width: 700px) {
+  .TabPanel {
+    width: 600px !important;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-device-width: 600px) {
+  .TabPanel {
+    width: 500px !important;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-device-width: 500px) {
+  .TabPanel {
+    width: 400px !important;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-device-width: 400px) {
+  .TabPanel {
+    width: 300px !important;
+  }
+}
