@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and reworked into a next.js project.
 
 ## Info about this project
 So yeah guys we reached the next level after my demon-program I am working now on my
