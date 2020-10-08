@@ -1,0 +1,44 @@
+.BG {
+  background-image: url("../img/p3.gif");
+  height: 50rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.BGContainer {
+    margin-top: 10rem;
+}
+
+.Title {
+  font-family: Roboto !important;
+  font-size: 4rem !important;
+}
+
+.TitleMark {
+  color: #282828;
+}
+
+.MoreButton {
+  margin-top: 16px !important;
+  color: #e3e2df !important;
+  border-color: #e3e2df !important;
+  border-radius: 2px !important;
+}
+
+.MoreButton:hover {
+  background-color: #ee4c7c !important;
+  border-color: #ee4c7c !important;
+}
+
+.Arrow{
+    overflow: hidden;
+    transition-duration: 0.8s;
+    transition-property: transform;
+}
+
+.Arrow2{
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}

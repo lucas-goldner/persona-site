@@ -1,0 +1,582 @@
+.abtBG {
+  background-color: #e3e2df;
+}
+
+.theAppBar {
+  background-color: #5d001e !important;
+}
+
+.ToolBarLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navDisplayFlex {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.linkText {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+.abtTitle {
+  color: #282828 !important;
+  font-family: Roboto !important;
+  margin-top: 16px !important;
+  position: relative !important;
+
+  animation: slideUp 0.5s 0.5s cubic-bezier(0.5, 0.53, 0.57, 0.53) both,
+    fadeIn 0.6s 0.5s ease-in both;
+  padding: 0 20px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.Hex {
+  display: flex;
+  position: relative;
+  margin: auto;
+  margin-top: 48px;
+  width: 240px;
+  height: 265px;
+  background-image: url("../img/me.png");
+  background-position: end;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+  animation: 1s turn 1;
+  backface-visibility: visible;
+}
+
+.MobileBubble {
+  display: flex;
+  position: relative;
+  margin: auto;
+  width: 300px;
+  height: 265px;
+  background-image: url(../img/BubbleTextMobile.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(
+    7% 12%,
+    18% 11%,
+    21% 23%,
+    100% 14%,
+    91% 65%,
+    0 52%,
+    8% 29%,
+    11% 16%,
+    0 16%,
+    6% 0
+  );
+}
+
+.BubbleContainer {
+  margin-top: 48px;
+}
+
+.Bubble {
+  display: flex;
+  position: relative;
+  margin: auto;
+  width: 300px;
+  height: 265px;
+  background-image: url(../img/BubbleText.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(
+    8% 30%,
+    5% 40%,
+    0 36%,
+    5% 44%,
+    10% 39%,
+    18% 52%,
+    100% 64%,
+    99% 30%,
+    100% 25%,
+    86% 23%,
+    18% 28%,
+    15% 39%
+  );
+}
+
+.MobileTextBoxes {
+  background-image: url(../img/textbubblestext.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  position: relative;
+  margin: auto;
+  clip-path: polygon(
+    19% 20%,
+    18% 0,
+    92% 0,
+    94% 22%,
+    77% 22%,
+    79% 43%,
+    100% 43%,
+    100% 71%,
+    81% 72%,
+    81% 100%,
+    0 100%,
+    0 74%,
+    23% 73%,
+    21% 47%,
+    0 48%,
+    0 21%
+  );
+  background-color: black;
+  width: 300px;
+  height: 265px;
+}
+
+.TextBoxes {
+  margin-top: 48px !important;
+  background-image: url(../img/textbubblestext.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  position: relative;
+  margin: auto;
+  clip-path: polygon(
+    19% 20%,
+    18% 0,
+    92% 0,
+    94% 22%,
+    77% 22%,
+    79% 43%,
+    100% 43%,
+    100% 71%,
+    81% 72%,
+    81% 100%,
+    0 100%,
+    0 74%,
+    23% 73%,
+    21% 47%,
+    0 48%,
+    0 21%
+  );
+  background-color: black;
+  width: 300px;
+  height: 265px;
+}
+
+.TheContainer {
+  margin-top: 48px !important;
+}
+
+.SkillCardsContainer {
+  margin-top: 48px !important;
+}
+
+.Cards {
+  maxwidth: 240;
+  font-family: "Robot";
+}
+
+#JS{
+    background-image: url(../img/JSLogo.png);
+    background-color: whitesmoke;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#JSTwo{
+    height: 200px;
+    background-image: url(../img/JSLogo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#React{
+    background-image: url(../img/ReactLogo.png);
+    background-color: whitesmoke;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#ReactTwo{
+    height: 200px;
+    background-image: url(../img/ReactLogo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#CSS{
+    background-image: url(../img/CSSLogo.png);
+    background-color: whitesmoke;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#CSSTwo{
+    height: 200px;
+    background-image: url(../img/CSSLogo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#HTML{
+    background-image: url(../img/HTMLLogo.png);
+    background-color: whitesmoke;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#HTMLTwo{
+    height: 200px;
+    background-image: url(../img/HTMLLogo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#CPlusPlus{
+    background-image: url(../img/CPlusPlusLogo.png);
+    background-color: whitesmoke;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#CPlusPlusTwo{
+    height: 200px;
+    background-image: url(../img/CPlusPlusLogo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#Adobe{
+    background-image: url(../img/Adobe.png);
+    background-color: whitesmoke;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#AdobeTwo{
+    height: 200px;
+    background-image: url(../img/Adobe.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#Java{
+    background-image: url(../img/JavaLogo.png);
+    background-color: whitesmoke;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#JavaTwo{
+    height: 200px;
+    background-image: url(../img/JavaLogo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.CardMedia {
+  height: 200;
+  padding-top: "8%";
+}
+
+@keyframes turn {
+  40% {
+    transform: perspective(300px) translateZ(80px) rotateY(170deg);
+  }
+  50% {
+    transform: perspective(300px) translateZ(80px) rotateY(190deg);
+  }
+  80%,
+  100% {
+    transform: perspective(300px) translateZ(0px) rotateY(360deg);
+  }
+}
+
+.content {
+  width: 100%;
+  color: #ee4c7c;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.content .line {
+  height: 3px;
+  background: #ee4c7c;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  -webkit-animation: dude 1.75s 1 forwards;
+  -moz-animation: dude 1.75s 1 forwards;
+  -o-animation: dude 1.75s 1 forwards;
+  animation: dude 1.75s 1 forwards;
+}
+
+.content2 {
+  width: 100%;
+  color: rgb(65, 156, 188);
+  cursor: pointer;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.content2 .line2 {
+  height: 3px;
+  background: rgb(65, 156, 188);
+  position: absolute;
+  top: 10px;
+  left: 0;
+  -webkit-animation: dude 1.75s 1 forwards;
+  -moz-animation: dude 1.75s 1 forwards;
+  -o-animation: dude 1.75s 1 forwards;
+  animation: dude 1.75s 1 forwards;
+}
+
+@-webkit-keyframes dude {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes dude {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-o-keyframes dude {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes dude {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.col {
+  width: calc(25% - 2rem);
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.container {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.front,
+.back {
+  background-size: cover;
+  border-radius: 10px;
+  background-position: center;
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1),
+    -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-align: center;
+  min-height: 280px;
+  height: auto;
+  border-radius: 10px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 1rem;
+}
+
+.back {
+  background: #cedce7;
+  background: -webkit-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+  background: -o-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+  background: linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+}
+
+.front:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  opacity: 0.6;
+  background-color: #000;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.container:hover .front,
+.container:focus .front,
+.container:hover .front,
+.container:hover .back,
+.container:focus .back,
+.container:hover .back {
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1),
+    -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.inner {
+  -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+  top: 50%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 1px solid transparent;
+  -webkit-perspective: inherit;
+  perspective: inherit;
+  z-index: 2;
+}
+
+.container .back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.container .front {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.container:hover .back {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.container:hover .front {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.front .inner p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.front .inner p:after {
+  content: "";
+  width: 4rem;
+  height: 0px;
+  position: absolute;
+  background: #c6d4df;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -0.75rem;
+}
+
+.front .inner span {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Robot";
+  font-weight: 300;
+}
+
+@media screen and (max-width: 64rem) {
+  .col {
+    width: calc(33.333333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .col {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 32rem) {
+  .col {
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}

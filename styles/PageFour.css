@@ -1,0 +1,31 @@
+.ctBG {
+  background-color: rgb(65, 156, 188);
+  font-family: "Roboto !important";
+}
+
+.ctTitle {
+  font-family: "Roboto";
+}
+
+.ctMail {
+  color: #e3afbc;
+}
+
+.ctIconButton {
+  color: white !important;
+  border: 2px solid #fff;
+  background-color: #e3afbc;
+}
+
+.ctIconButton:hover {
+  background-color: "#5d001e";
+}
+
+.ImprintButton {
+  color: white !important;
+  border: "2px solid #fff";
+}
+
+.ImprintButton:hover {
+  background-color: #e3afbc;
+}
