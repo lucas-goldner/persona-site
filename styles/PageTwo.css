@@ -28,7 +28,7 @@
 
 .abtTitle {
   color: #282828 !important;
-  font-family: Roboto !important;
+  font-family: Roboto;
   margin-top: 16px !important;
   position: relative !important;
 
