@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Lucas Goldner Persona(l) Site</title>
+        <title>Lucas Goldner Persona(l) Site for Web- and Mobiledevelopment</title>
         <meta name="author" content="Lucas Goldner" />
         <meta name="keywords" content="Lucas, Goldner, Personal, Site, Developer, Front-End, Mobile" />
         <meta
