@@ -72,7 +72,7 @@ const JStileData = [
   {
     img: "./JSPicOne.png",
     title: "Persona(l) Website",
-    link: "https://persona-site.vercel.app/",
+    link: "https://lucas-goldner.com",
   },
   {
     img: "./JSPicTwo.png",
