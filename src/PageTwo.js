@@ -298,7 +298,7 @@ function PageTwo() {
                           <CardMedia
                             className="CardMedia"
                             image="../img/CPlusPlusLogo.png"
-                            title="C++"
+                            title="C#"
                           />
                           <CardContent>
                             <Typography
@@ -306,7 +306,7 @@ function PageTwo() {
                               variant="h5"
                               component="h2"
                             >
-                              C++
+                              C#
                             </Typography>
                             <div id="CPlusPlusTwo" />
                             <Typography
@@ -512,7 +512,7 @@ function PageTwo() {
                       <div className="container">
                         <div className="front" id="CPlusPlus">
                           <div className="inner">
-                            <p>C++</p>
+                            <p>C#</p>
                           </div>
                         </div>
                         <div className="back">
